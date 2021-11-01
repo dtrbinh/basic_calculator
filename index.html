@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Basic Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -12,53 +12,58 @@
 <body>
 
    <h1 id="title">Basic Calculator</h1>
-        <h2>Phép cộng</h2>
-        <form class="form" id="form1">
-            <label for="val1">Nhập a: </label>
-                <input type="number" name="a" id="a1"><br>
-            <label for="val2">Nhập b: </label>
-                <input type="number" name="b" id="b1"><br>
+   <div class="container">
+        <div class="container-1">
+            <form class="form" id="form1">
+                <h2 id="func_title">Phép cộng</h2>
+                <label for="val1" id="label_a">Nhập a: </label>
+                    <input type="number" name="a" class="a" id="a1"><br><br>
+                <label for="val2" id="label_b">Nhập b: </label>
+                    <input type="number" name="b" class="b" id="b1"><br><br>
+                <input type="button" onclick="plus(document.getElementById('a1').value, document.getElementById('b1').value )" 
+                    value="Submit" id ="bt_submit">
+                <input type="reset" id="bt_reset">
+                <p type = "text" class="result" id = "resultPlus">0</p>
+            </form>
 
-            <input type="button" onclick="plus(document.getElementById('a1').value, document.getElementById('b1').value )" value="Submit">
-            <input type="reset">
-            <p type = "text" id = "resultPlus">0</p>
-        </form>
+            <form class="form" id="form2">
+                <h2 id="func_title">Phép trừ</h2>
+                <label for="val1" id="label_a">Nhập a: </label>
+                    <input type="number" name="a" class="a" id="a2"><br><br>
+                <label for="val2" id ="label_b">Nhập b: </label>
+                    <input type="number" name="b" class="b" id="b2"><br><br>
+                <input type="button" onclick="subtract(document.getElementById('a2').value, document.getElementById('b2').value )"
+                    value="Submit" id="bt_submit">
+                <input type="reset" id="bt_reset">
+                <p type = "text" class="result" id = "resultSubtract">0</p>
+            </form>
+        </div>
 
-        <h2>Phép trừ</h2>
-        <form class="form" id="form2">
-            <label for="val1">Nhập a: </label>
-                <input type="number" name="a" id="a2"><br>
-            <label for="val2">Nhập b: </label>
-                <input type="number" name="b" id="b2"><br>
+        <div class="container-2">
+            <form class="form" id="form3">
+                <h2 id="func_title">Phép nhân</h2>
+                <label for="val1" id="label_a">Nhập a: </label>
+                    <input type="number" name="a" class="a" id="a3"><br><br>
+                <label for="val2" id="label_b">Nhập b: </label>
+                    <input type="number" name="b" class="b" id="b3"><br><br>
+                <input type="button" onclick="multipli(document.getElementById('a3').value, document.getElementById('b3').value )" 
+                    value="Submit" id="bt_submit">
+                <input type="reset" id="bt_reset">
+                <p type = "text" class="result" id = "resultMultipli">0</p>
+            </form>
 
-            <input type="button" onclick="subtract(document.getElementById('a2').value, document.getElementById('b2').value )" value="Submit">
-            <input type="reset">
-            <p type = "text" id = "resultSubtract">0</p>
-        </form>
-
-        <h2>Phép nhân</h2>
-        <form class="form" id="form3">
-            <label for="val1">Nhập a: </label>
-                <input type="number" name="a" id="a3"><br>
-            <label for="val2">Nhập b: </label>
-                <input type="number" name="b" id="b3"><br>
-
-            <input type="button" onclick="multipli(document.getElementById('a3').value, document.getElementById('b3').value )" value="Submit">
-            <input type="reset">
-            <p type = "text" id = "resultMultipli">0</p>
-        </form>
-
-        <h2>Phép chia</h2>
-        <form class="form" id="form4">
-            <label for="val1">Nhập a: </label>
-                <input type="number" name="a" id="a4"><br>
-            <label for="val2">Nhập b: </label>
-                <input type="number" name="b" id="b4"><br>
-
-            <input type="button" onclick="division(document.getElementById('a4').value, document.getElementById('b4').value )" value="Submit">
-            <input type="reset">
-            <p type = "text" id = "resultDivis">0</p>
-        </form>
-
+            <form class="form" id="form4">
+                <h2 id="func_title">Phép chia</h2>
+                <label for="val1" id="label_a">Nhập a: </label>
+                    <input type="number" name="a" class="a" id="a4"><br><br>
+                <label for="val2" id="label_b">Nhập b: </label>
+                    <input type="number" name="b" class="b" id="b4"><br><br>
+                <input type="button" onclick="division(document.getElementById('a4').value, document.getElementById('b4').value )"
+                value="Submit" id="bt_submit">
+                <input type="reset" id="bt_reset">
+                <p type = "text" class="result" id = "resultDivis">0</p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
